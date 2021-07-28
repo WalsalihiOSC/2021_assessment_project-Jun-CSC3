@@ -1,13 +1,17 @@
 import tkinter as tk
-from start_window import start_window
+#from start_window import start_window
+#from selection_window import selection_window
 
-class MathLearn(tk):
-    def __init__(self):
-        tk.__init__(self)
-        self.geometry("1440x900")
+class StartPage():
+    def __init__(self,*args, **kwargs):
+        self.title("MathLearn")
+        self.geometry("1024x600")
 
 
+class NextPage(tk):
+    pass
 
-root = MathLearn()
-root.mainloop()
-
+if __name__ == "__main__":
+    root = tk.Tk()
+    StartPage(root)
+    root.mainloop()

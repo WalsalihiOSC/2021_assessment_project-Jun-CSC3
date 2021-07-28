@@ -1,5 +1,6 @@
 import tkinter as tk
 
+
 class difficultywindow(tk.Frame):
 
 
