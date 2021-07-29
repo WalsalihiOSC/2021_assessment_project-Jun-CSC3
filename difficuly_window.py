@@ -14,8 +14,8 @@ class difficultywindow(tk.Frame):
         main_frame = tk.Frame()
         main_frame.pack()
         tk.Label(main_frame,text="Pick your Game Theme",font=("Arial",30),bg=BG_colour).pack()
-        easy_btn = tk.Button(text="Easy",command=self.click_easy,font=("Arial",25))
-        hard_btn = tk.Button(text="Hard",command=self.click_hard,font=("Arial",25))
+        easy_btn = tk.Button(main_frame,text="Easy",command=self.click_easy,font=("Arial",25))
+        hard_btn = tk.Button(main_frame,text="Hard",command=self.click_hard,font=("Arial",25))
         easy_btn.pack()
         hard_btn.pack()
 
