@@ -3,7 +3,7 @@ from user_info import info
 
 BG_colour = "#FAE3C6"
 
-class difficultywindow(tk.Frame):
+class difficultywindow(Frame):
     def click_easy(self):
         info("Easy")
     def click_hard(self):
@@ -11,7 +11,7 @@ class difficultywindow(tk.Frame):
 
     def __init__(self, *args, **kwargs):
         tk.Frame.__init__(self)
-        main_frame = tk.Frame()
+        main_frame = tk.Frame(background=BG_colour,width=1440,height=900)
         main_frame.pack()
         tk.Label(main_frame,text="Pick your Game Theme",font=("Arial",30),bg=BG_colour).pack()
         easy_btn = tk.Button(main_frame,text="Easy",command=self.click_easy,font=("Arial",25))
