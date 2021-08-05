@@ -16,13 +16,18 @@ class difficultywindow(tk.Frame):
         # This allows the background to be BG_colour otherwise the background colours
         # For the buttons will be white
         main_frame = tk.Frame(background=BG_colour)
-        main_frame.pack()
-        tk.Label(main_frame,text="Pick your Game Theme",font=("Arial",30),bg=BG_colour).pack()
+        main_frame.grid(column=5,row=3)
+        name_label = tk.Label(main_frame,text="What is your name",font=("Arial",30),bg=BG_colour)
+        name_label.grid(row=2,column=2)
+        name_entry = tk.Entry()
+        name_entry.grid(row=2,column=3)
+        name_difficulty = tk.Label(main_frame,text="Choose your difficulty",font=("Arial",30),bg=BG_colour)
+        name_difficulty.grid(row=2,column=4)
         # Easy and Hard buttons 
         easy_btn = tk.Button(main_frame,text="Easy",command=self.click_easy,font=("Arial",25))
         hard_btn = tk.Button(main_frame,text="Hard",command=self.click_hard,font=("Arial",25))
-        easy_btn.pack()
-        hard_btn.pack()
+        easy_btn.grid(row=1,column=5)
+        hard_btn.grid(row=3,column=5)
 
 if __name__ == "__main__":
     root = tk.Tk()

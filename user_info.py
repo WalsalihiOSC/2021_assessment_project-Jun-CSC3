@@ -3,7 +3,7 @@ import tkinter as tk
 
 class info():
 
-    def __init__(self,difficulty="this is a test",name=""):
+    def __init__(self,difficulty="",name=""):
         self.diff = difficulty
         print(self.diff)
         self.name = name
