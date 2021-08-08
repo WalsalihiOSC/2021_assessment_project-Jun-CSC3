@@ -9,6 +9,7 @@ class info():
         self.name = name
         print(self.name)
 
-    
+    def getdiff(self):
+        pass
 
         

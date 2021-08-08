@@ -4,11 +4,18 @@ from user_info import info
 BG_colour = "#FAE3C6"
 
 class difficultywindow(tk.Frame):
+
+    def click(self):
+        print("Click")
     # Functions that sets the difficulty of the program
     def click_easy(self):
-        info(name="Easy")
+        info(difficulty="Easy")
+        self.click()
     def click_hard(self):
-        info("Hard")
+        info(difficulty="Hard")
+        self.click()
+
+
 
     def __init__(self, *args, **kwargs):
         tk.Frame.__init__(self)
@@ -24,10 +31,12 @@ class difficultywindow(tk.Frame):
         name_difficulty = tk.Label(main_frame,text="Choose your difficulty",font=("Arial",30),bg=BG_colour)
         name_difficulty.grid(row=4,column=2)
         # Easy and Hard buttons 
-        easy_btn = tk.Button(main_frame,text="Easy",command=self.click_easy,font=("Arial",25))
-        hard_btn = tk.Button(main_frame,text="Hard",command=self.click_hard,font=("Arial",25))
+        easy_btn = tk.Button(main_frame,text="Easy",command=(self.click_easy),font=("Arial",25))
+        hard_btn = tk.Button(main_frame,text="Hard",command=(self.click_hard),font=("Arial",25))
         easy_btn.grid(row=5,column=1)
         hard_btn.grid(row=5,column=3)
+
+        
 
 if __name__ == "__main__":
     root = tk.Tk()
